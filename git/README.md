@@ -1,11 +1,5 @@
 ## Git Commands 
 
-| Command   |  Comment |
-|:---------:|:----------------------:|
-| git init | initialize repository |
-| git add . | add all files to stage |
-| git commit -m "" | add a commit with a message|
-
 ## Command I use for changes, and commits, and i will use for push new code on the project when i have some changes. 
 
 ```shell
@@ -13,7 +7,7 @@ $ cd my-project
  # initialise a git repository
  
  # Add all files to be tracked
- $ git add .
+ $ git add . # Always i use when any changes is made by myself
  # commit tracked files with a message
  $ git commit -m “some message”
  # push to a remote repository
