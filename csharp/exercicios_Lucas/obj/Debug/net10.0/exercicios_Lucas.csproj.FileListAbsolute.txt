@@ -1,0 +1,15 @@
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/bin/Debug/net10.0/exercicios_Lucas
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/bin/Debug/net10.0/exercicios_Lucas.deps.json
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/bin/Debug/net10.0/exercicios_Lucas.runtimeconfig.json
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/bin/Debug/net10.0/exercicios_Lucas.dll
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/bin/Debug/net10.0/exercicios_Lucas.pdb
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/obj/Debug/net10.0/exercicios_Lucas.GeneratedMSBuildEditorConfig.editorconfig
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/obj/Debug/net10.0/exercicios_Lucas.AssemblyInfoInputs.cache
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/obj/Debug/net10.0/exercicios_Lucas.AssemblyInfo.cs
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/obj/Debug/net10.0/exercicios_Lucas.csproj.CoreCompileInputs.cache
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/obj/Debug/net10.0/exercicios_Lucas.sourcelink.json
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/obj/Debug/net10.0/exercicios_Lucas.dll
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/obj/Debug/net10.0/refint/exercicios_Lucas.dll
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/obj/Debug/net10.0/exercicios_Lucas.pdb
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/obj/Debug/net10.0/exercicios_Lucas.genruntimeconfig.cache
+/Users/negrelias/Freecodecam project/MyLearnPath/csharp/exercicios_Lucas/obj/Debug/net10.0/ref/exercicios_Lucas.dll
