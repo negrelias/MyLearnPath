@@ -2,145 +2,99 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
+class Program {
+  // com o metedo static eu posso usar a minha lista em qualquer lugar do
+  // codigo.
+  static List<string> pendents = new List<string>();
+  static List<string> completed = new List<string>();
 
-class Program{
+  static void Main() {
+    Console.WriteLine($"Welcome to do list simple\n");
 
+    while (true) {
+      Console.Clear();  // aqui vou começa a limpa o menu
 
-// com o metedo static eu posso usar a minha lista em qualquer lugar do codigo.
- static List<string> pendents = new List <string>();
- static List<string> completed = new List <string>();
+      // posso criar um metedo aonde posso chama o menu
 
- static void Main()
-    {
+      showTheMenu();
 
-        Console.WriteLine($"Welcome to do list simple\n");
+      // Console.WriteLine($"#########################Menu####################\n");
+      Console.WriteLine(
+          $"\n#########################Menu####################\n");
+      Console.WriteLine($"Escolha um Item\n");
+      Console.WriteLine($"A. Item");
+      Console.WriteLine($"B. Remove");
+      Console.WriteLine($"C. complete Item");
+      Console.WriteLine($"E. sair\n");
 
+      // estou usando otrim para remover os espaças em brancos, e tambem estou
+      // usando o ? para caso o usario colocar alguma coisa null o sistema não
+      // faz nada.
 
-        while (true)
-       {
-            
-          Console.Clear(); // aqui vou começa a limpa o menu 
+      Console.WriteLine($"Qual opção escolhes:\n");
 
-          // posso criar um metedo aonde posso chama o menu 
+      string userChoose = Console.ReadLine() ?.Trim().ToUpper();
 
+      Console.Clear();
 
-          showTheMenu();
+      switch (userChoose) {
+        case "A":
 
+          addItem();
 
-          //Console.WriteLine($"#########################Menu####################\n");
-          Console.WriteLine($"\n#########################Menu####################\n");
-          Console.WriteLine($"Escolha um Item\n");
-          Console.WriteLine($"A. Item");
-          Console.WriteLine($"B. Remove");
-          Console.WriteLine($"C. complete Item");
-          Console.WriteLine($"E. sair\n");
+          break;
 
+        case "B":
 
-          // estou usando otrim para remover os espaças em brancos, e tambem estou usando o ? para caso o usario colocar alguma coisa
-          // null o sistema não faz nada.
+          // removeItem();
 
-          Console.WriteLine($"Qual opção escolhes:\n");
+          break;
 
-          string userChoose = Console.ReadLine()? .Trim().ToUpper();
+        case "C":
 
-          Console.Clear();
+          // completeItem();
 
+          break;
 
-          switch (userChoose)
-          {
-            case "A":
+        case "E":
 
-            addItem();
+          Console.WriteLine($"\nAté mais, saindo...");
 
-            break;
+          return;
 
+        default:
 
-            case "B":
+          Console.WriteLine($"Opção invalida");
 
-            //removeItem();
+          break;
+      }
 
-            break;
-
-
-            case "C":
-
-           // completeItem();
-
-            break;
-
-            case "E":
-
-            Console.WriteLine($"\nAté mais, saindo...");
-
-            return;
-
-            default:
-
-            Console.WriteLine($"Opção invalida");
-
-            break;
-
-             }
-
-
-             Console.WriteLine("\nPressione ENTER para continuar...");
-             Console.ReadLine();
-            
-            }
-        
-          
-          static  void showTheMenu()
-
-          {
-
-            Console.WriteLine($"[{pendents.Count()}]Peding task\n");
-
-
-            for (int i = 0; i < pendents.Count; i++)
-            {
-                Console.WriteLine($"   {i + 1}) {pendents[i]}");
-            }
-
-
-
-          Console.WriteLine($"[{pendents.Count()}]Peding task");
-
-
-          for (int i = 0; i < completed.Count; i++)
-            {
-                Console.WriteLine($"   {i + 1}) {completed[i]}");
-            }
-
-
-
-     }
-
-
-     static void addItem()
-        {
-            Console.WriteLine("Adiciona item:\n");
-            Console.WriteLine($"Coloqui escreva o item que quer adicionar");
-            string tarefa = Console.ReadLine()?.Trim();
-
-            pendents.Add(tarefa);
-
-        }
-
-
-
-
-
-
+      Console.WriteLine("\nPressione ENTER para continuar...");
+      Console.ReadLine();
     }
 
+    static void showTheMenu()
 
+    {
+      Console.WriteLine($"[{pendents.Count()}]Peding task\n");
 
+      for (int i = 0; i < pendents.Count; i++) {
+        Console.WriteLine($"   {i + 1}) {pendents[i]}");
+      }
 
+      Console.WriteLine($"[{pendents.Count()}]Peding task");
 
+      for (int i = 0; i < completed.Count; i++) {
+        Console.WriteLine($"   {i + 1}) {completed[i]}");
+      }
+    }
 
+    static void addItem() {
+      Console.WriteLine("Adiciona item:\n");
+      Console.WriteLine($"Coloqui escreva o item que quer adicionar");
+      string tarefa = Console.ReadLine()?.Trim();
 
-
-
-
+      pendents.Add(tarefa);
+    }
+  }
 }
-
