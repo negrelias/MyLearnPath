@@ -1,0 +1,5 @@
+/Users/negrelias/Freecodecam project/MyLearnPath/obj/Debug/net10.0/MyLearnPath.GeneratedMSBuildEditorConfig.editorconfig
+/Users/negrelias/Freecodecam project/MyLearnPath/obj/Debug/net10.0/MyLearnPath.AssemblyInfoInputs.cache
+/Users/negrelias/Freecodecam project/MyLearnPath/obj/Debug/net10.0/MyLearnPath.AssemblyInfo.cs
+/Users/negrelias/Freecodecam project/MyLearnPath/obj/Debug/net10.0/MyLearnPath.csproj.CoreCompileInputs.cache
+/Users/negrelias/Freecodecam project/MyLearnPath/obj/Debug/net10.0/MyLearnPath.sourcelink.json
