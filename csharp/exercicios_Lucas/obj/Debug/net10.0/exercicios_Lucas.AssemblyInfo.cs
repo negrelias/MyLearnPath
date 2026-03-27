@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("exercicios_Lucas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+04250d281d05c70fddbf3ad643b0d09e6834f65d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6731735baef07dbb9949deb8ff80e0141e8c1f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("exercicios_Lucas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("exercicios_Lucas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

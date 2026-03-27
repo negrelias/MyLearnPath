@@ -1,100 +1,153 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 
-class Program {
-  // com o metedo static eu posso usar a minha lista em qualquer lugar do
-  // codigo.
-  static List<string> pendents = new List<string>();
-  static List<string> completed = new List<string>();
+class Program
+{
+  static List<string> pendentes = new List<string>();
+  static List<string> completadas = new List<string>();
 
-  static void Main() {
-    Console.WriteLine($"Welcome to do list simple\n");
+  static void Main()
+  {
+    Console.WriteLine("Bem-vindo à sua Lista de Tarefas!\n");
 
-    while (true) {
-      Console.Clear();  // aqui vou começa a limpa o menu
+    while (true)
+    {
+      Console.Clear();
 
-      // posso criar um metedo aonde posso chama o menu
+      ShowMenu();
 
-      showTheMenu();
+      Console.WriteLine("\n######################### MENU ########################");
+      Console.WriteLine("Escolha uma opção:");
+      Console.WriteLine("A. dicionar tarefa");
+      Console.WriteLine("B. Remover tarefa");
+      Console.WriteLine("C. Completar tarefa");
+      Console.WriteLine("E. Sair");
 
-      // Console.WriteLine($"#########################Menu####################\n");
-      Console.WriteLine(
-          $"\n#########################Menu####################\n");
-      Console.WriteLine($"Escolha um Item\n");
-      Console.WriteLine($"A. Item");
-      Console.WriteLine($"B. Remove");
-      Console.WriteLine($"C. complete Item");
-      Console.WriteLine($"E. sair\n");
-
-      // estou usando otrim para remover os espaças em brancos, e tambem estou
-      // usando o ? para caso o usario colocar alguma coisa null o sistema não
-      // faz nada.
-
-      Console.WriteLine($"Qual opção escolhes:\n");
-
-      string userChoose = Console.ReadLine() ?.Trim().ToUpper();
+      Console.Write("\nDigite sua opção: ");
+      string escolha = Console.ReadLine()?.Trim().ToUpper();
 
       Console.Clear();
 
-      switch (userChoose) {
+      switch (escolha)
+      {
         case "A":
-
-          addItem();
-
+          AddItem();
           break;
 
         case "B":
-
-          // removeItem();
-
+          RemoveItem();
           break;
 
         case "C":
-
-          // completeItem();
-
+          CompleteItem();
           break;
 
         case "E":
-
-          Console.WriteLine($"\nAté mais, saindo...");
-
+          Console.WriteLine("\nAté mais! Saindo do programa...");
           return;
 
         default:
-
-          Console.WriteLine($"Opção invalida");
-
+          Console.WriteLine("Opção inválida! Tente novamente.");
           break;
       }
 
       Console.WriteLine("\nPressione ENTER para continuar...");
       Console.ReadLine();
     }
+  }
 
-    static void showTheMenu()
 
+  static void ShowMenu()
+  {
+    Console.WriteLine($"[{pendentes.Count}] Tarefas pendentes:\n");
+
+    for (int i = 0; i < pendentes.Count; i++)
     {
-      Console.WriteLine($"[{pendents.Count()}]Peding task\n");
-
-      for (int i = 0; i < pendents.Count; i++) {
-        Console.WriteLine($"   {i + 1}) {pendents[i]}");
-      }
-
-      Console.WriteLine($"[{pendents.Count()}]Peding task");
-
-      for (int i = 0; i < completed.Count; i++) {
-        Console.WriteLine($"   {i + 1}) {completed[i]}");
-      }
+      Console.WriteLine($"   {i + 1}) {pendentes[i]}");
     }
 
-    static void addItem() {
-      Console.WriteLine("Adiciona item:\n");
-      Console.WriteLine($"Coloqui escreva o item que quer adicionar");
-      string tarefa = Console.ReadLine()?.Trim();
+    Console.WriteLine($"\n[{completadas.Count}] Tarefas concluídas:\n");
 
-      pendents.Add(tarefa);
+    for (int i = 0; i < completadas.Count; i++)
+    {
+      Console.WriteLine($"   {i + 1}) {completadas[i]}");
+    }
+  }
+
+  static void AddItem()
+  {
+    Console.WriteLine("=== Adicionar Tarefa ===\n");
+    Console.Write("Digite a tarefa que deseja adicionar: ");
+    string tarefa = Console.ReadLine()?.Trim();
+
+    if (!string.IsNullOrEmpty(tarefa))
+    {
+      pendentes.Add(tarefa);
+      Console.WriteLine("Tarefa adicionada com sucesso!");
+    }
+    else
+    {
+      Console.WriteLine("Tarefa não pode estar vazia.");
+    }
+  }
+
+  static void RemoveItem()
+  {
+    Console.WriteLine("=== Remover Tarefa ===\n");
+
+    if (pendentes.Count == 0)
+    {
+      Console.WriteLine("Não há tarefas pendentes para remover.");
+      return;
+    }
+
+    ShowPendingTasks();
+
+    Console.Write("\nDigite o número da tarefa que deseja remover: ");
+    if (int.TryParse(Console.ReadLine(), out int numero) && numero >= 1 && numero <= pendentes.Count)
+    {
+      string removida = pendentes[numero - 1];
+      pendentes.RemoveAt(numero - 1);
+      Console.WriteLine($"\nTarefa removida: \"{removida}\"");
+    }
+    else
+    {
+      Console.WriteLine("Número inválido!");
+    }
+  }
+
+  static void CompleteItem()
+  {
+    Console.WriteLine("=== Completar Tarefa ===\n");
+
+    if (pendentes.Count == 0)
+    {
+      Console.WriteLine("Não há tarefas pendentes para completar.");
+      return;
+    }
+
+    ShowPendingTasks();
+
+    Console.Write("\nDigite o número da tarefa concluída: ");
+    if (int.TryParse(Console.ReadLine(), out int numero) && numero >= 1 && numero <= pendentes.Count)
+    {
+      string concluida = pendentes[numero - 1];
+      pendentes.RemoveAt(numero - 1);
+      completadas.Add(concluida);
+      Console.WriteLine($"\nTarefa concluída: \"{concluida}\"");
+    }
+    else
+    {
+      Console.WriteLine("Número inválido!");
+    }
+  }
+
+
+  static void ShowPendingTasks()
+  {
+    for (int i = 0; i < pendentes.Count; i++)
+    {
+      Console.WriteLine($"  {i + 1}) {pendentes[i]}");
     }
   }
 }
